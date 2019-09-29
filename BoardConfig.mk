@@ -21,10 +21,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a7
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
-# Flags
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-
 # Kernel
 TARGET_PREBUILT_KERNEL := device/bq/freezerhd/kernel
 BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --cmdline bootopt=64S3,32N2,64N2 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000
